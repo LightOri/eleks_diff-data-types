@@ -1,0 +1,1 @@
+import {xhrHandler} from 'xmlHttpRequest';
