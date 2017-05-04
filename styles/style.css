@@ -1,21 +1,19 @@
 header li:hover {
-	background-color: #444;
+    background-color: #444;
 }
 
 aside li:hover {
-	background-color: #ddd;
-	cursor: pointer;
+    background-color: #ddd;
+    cursor: pointer;
 }
 
 aside li:first-child {
-	background-color: #FAEBD7;
-	font-weight: 700;
-	text-align: center;
+    background-color: #FAEBD7;
+    font-weight: 700;
+    text-align: center;
 }
 
-aside li:nth-child(2),
-aside li:nth-child(3),
-aside li:nth-child(4) {
-	background-color: #7FFFD4;
-	text-align: center;
+aside li:not(:first-child) {
+    background-color: #7FFFD4;
+    text-align: center;
 }
