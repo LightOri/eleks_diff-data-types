@@ -22,6 +22,21 @@ function mockXhrData(){
 
 function xhrHandler(data) {
 	const resultsContainer = document.getElementById('result');
-	resultsContainer.innerHTML = data;
+	const parsedData = JSON.parse(data);
+
+	//user data
+	const email = parsedData.data.profile.email
+	const firstname = parsedData.data.profile.firstname
+	const lastname = parsedData.data.profile.lastname
+	const company = parsedData.data.profile.company
+	const id = parsedData.data.profile.id_company
 	
+	const userData = 'Firstname: ' + firstname + '<br>'
+			+ 'Email: ' + email + '<br>'
+			+ 'Lastname: ' + lastname + '<br>'
+			+ 'Company: ' + company + '<br>'
+			+ 'Company ID: ' + id + '<br>'
+
+	//show data on the page
+	resultsContainer.innerHTML = userData;
 };
