@@ -6,7 +6,7 @@ export const exportPromises = (function() {
         return new Promise((resolve, reject) => {
 
             let xhr = new XMLHttpRequest()
-            xhr.open('GET', 'app/data/data.json', true)
+            xhr.open('GET', 'data.json', true)
 
             xhr.onreadystatechange = function() {
                 const DONE = 4,

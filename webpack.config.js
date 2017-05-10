@@ -1,5 +1,7 @@
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './app/main.js',
@@ -17,6 +19,10 @@ module.exports = {
         }]
     },
     plugins: [
-        new ExtractTextPlugin("style.css")
+        new ExtractTextPlugin("style.css"),
+        new HtmlWebpackPlugin({ template: './app/index.html' }),
+        new CopyWebpackPlugin([
+            { from: 'app/data' }
+        ])
     ]
 };
