@@ -4,8 +4,8 @@
   "description": "some_description",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "server": "webpack-dev-server --watch",
+    "build": "webpack --watch",
+    "start": "webpack-dev-server --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/LightOri/eleks_diff-data-types#readme",
   "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-react": "^6.24.1",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.1",
     "extract-text-webpack-plugin": "^2.1.0",
@@ -28,5 +31,10 @@
     "style-loader": "^0.17.0",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.1.1"
   }
 }

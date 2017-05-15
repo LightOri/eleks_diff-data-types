@@ -1,13 +1,9 @@
 import './styles/style.scss';
-import './scripts/jQueryAJAX.js';
-import './scripts/JSON.js';
-import './scripts/Promises.js';
-import './scripts/xmlHttpRequest.js';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import AppRouter from './AppRouter';
 
-// handling RESET button
-const resetButton = document.getElementById('reset');
-resetButton.addEventListener('click', handleReset);
-
-function handleReset(e) {
-  location.reload()
-};
+ReactDOM.render(
+  <AppRouter />,
+  document.getElementById('root')
+);
